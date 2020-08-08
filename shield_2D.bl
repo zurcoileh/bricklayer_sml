@@ -1,0 +1,173 @@
+open Level_3;
+(* ==================================== 
+				ART SHOW 
+		  CAPTAIN AMERICA SHIELD
+	  *******************************			
+	  * 	Author: Helio Ribeiro   *
+	  * 	Class: CIST 1940-001    *
+	  * 	Date:   10/04/2014      *
+	  *******************************
+	  
+  =====================================*)     
+
+(* Functions declarations *)
+
+fun circles r (x,z) =
+	(
+		circleXZ r RED(x,z);
+		circleXZ (r-15) WHITE(x,z);
+		circleXZ (r-30) RED(x,z);
+		circleXZ (r-45) BLUE(x,z);
+		circleXZ (r-60) WHITE(x,z)
+	);
+	
+fun star (x,z) = 
+	(
+	    put2D(x+49,z+1) WHITE(x+1,z+33);	
+		
+		lineXZ (x+12,z+4) (x+49,z+33) WHITE;
+		lineXZ (x+13,z+5) (x+48,z+33) WHITE;
+		lineXZ (x+14,z+6) (x+47,z+33) WHITE;
+		lineXZ (x+15,z+7) (x+46,z+33) WHITE;
+		lineXZ (x+16,z+8) (x+45,z+33) WHITE;
+		lineXZ (x+17,z+9) (x+44,z+33) WHITE;
+		lineXZ (x+18,z+10) (x+43,z+33) WHITE;
+		lineXZ (x+19,z+11) (x+42,z+33) WHITE;
+		lineXZ (x+20,z+12) (x+41,z+33) WHITE;
+		lineXZ (x+21,z+13) (x+40,z+33) WHITE;
+		lineXZ (x+22,z+14) (x+39,z+33) WHITE;
+		lineXZ (x+23,z+15) (x+38,z+33) WHITE;
+		lineXZ (x+24,z+16) (x+37,z+33) WHITE;
+		lineXZ (x+25,z+17) (x+36,z+33) WHITE;
+		lineXZ (x+26,z+18) (x+35,z+33) WHITE;
+		lineXZ (x+27,z+19) (x+34,z+33) WHITE;
+		lineXZ (x+25,z+20) (x+33,z+33) WHITE;
+		
+		lineXZ (x+39,z+4) (x+1,z+33) WHITE;
+		lineXZ (x+38,z+5) (x+2,z+33) WHITE;
+		lineXZ (x+37,z+6) (x+3,z+33) WHITE;
+		lineXZ (x+36,z+7) (x+4,z+33) WHITE;
+		lineXZ (x+35,z+8) (x+5,z+33) WHITE;
+		lineXZ (x+34,z+9) (x+6,z+33) WHITE;
+		lineXZ (x+33,z+10) (x+7,z+33) WHITE;
+		lineXZ (x+32,z+11) (x+8,z+33) WHITE;
+		lineXZ (x+31,z+12) (x+9,z+33) WHITE;
+		lineXZ (x+30,z+13) (x+10,z+33) WHITE;
+		lineXZ (x+29,z+14) (x+11,z+33) WHITE;
+		lineXZ (x+28,z+15) (x+12,z+33) WHITE;
+		lineXZ (x+27,z+16) (x+13,z+33) WHITE;
+		lineXZ (x+26,z+17) (x+14,z+33) WHITE;
+		lineXZ (x+25,z+18) (x+15,z+33) WHITE;		
+		
+		lineXZ (x+12,z+4) (x+15,z+21) WHITE;
+		lineXZ (x+13,z+5) (x+16,z+22) WHITE;
+		lineXZ (x+14,z+6) (x+17,z+23) WHITE;
+		lineXZ (x+15,z+7) (x+18,z+24) WHITE;
+		lineXZ (x+16,z+8) (x+19,z+25) WHITE;
+		lineXZ (x+17,z+9) (x+20,z+26) WHITE;
+		lineXZ (x+18,z+10) (x+21,z+27) WHITE;
+		lineXZ (x+19,z+11) (x+22,z+28) WHITE;
+		lineXZ (x+20,z+12) (x+23,z+29) WHITE;
+		
+		lineXZ (x+35,z+21) (x+39,z+4) WHITE;
+		lineXZ (x+34,z+22) (x+38,z+5) WHITE;
+		lineXZ (x+33,z+23) (x+37,z+6) WHITE;
+		lineXZ (x+32,z+24) (x+36,z+7) WHITE;
+		lineXZ (x+31,z+25) (x+35,z+8) WHITE;
+		lineXZ (x+30,z+26) (x+34,z+9) WHITE;
+		lineXZ (x+29,z+27) (x+33,z+10) WHITE;
+		lineXZ (x+28,z+28) (x+32,z+11) WHITE;
+		lineXZ (x+27,z+29) (x+31,z+12) WHITE;
+		
+		lineXZ (x+18,z+33) (x+25,z+50) WHITE;
+		lineXZ (x+19,z+33) (x+25,z+50) WHITE;
+		lineXZ (x+20,z+33) (x+25,z+50) WHITE;
+		lineXZ (x+21,z+33) (x+25,z+50) WHITE;
+		lineXZ (x+22,z+33) (x+25,z+50) WHITE;
+		lineXZ (x+23,z+33) (x+25,z+50) WHITE;		
+		lineXZ (x+24,z+33) (x+25,z+50) WHITE;
+		lineXZ (x+25,z+33) (x+25,z+50) WHITE;
+		
+		lineXZ (x+25,z+50) (x+32,z+33) WHITE;
+		lineXZ (x+25,z+50) (x+31,z+33) WHITE;
+		lineXZ (x+25,z+50) (x+30,z+33) WHITE;
+		lineXZ (x+25,z+50) (x+29,z+33) WHITE;
+		lineXZ (x+25,z+50) (x+28,z+33) WHITE;
+		lineXZ (x+25,z+50) (x+27,z+33) WHITE;
+		lineXZ (x+25,z+50) (x+26,z+33) WHITE;
+		lineXZ (x+25,z+50) (x+25,z+33) WHITE;
+		
+		lineXZ (x+12,z+4) (x+15,z+21) BLACK;
+		lineXZ (x+39,z+4) (x+25,z+14) BLACK;
+		lineXZ (x+12,z+4) (x+25,z+14) BLACK;
+		lineXZ (x+15,z+21) (x+1,z+33) BLACK;
+		lineXZ (x+35,z+21) (x+39,z+4) WHITE;
+		lineXZ (x+18,z+33) (x+25,z+50) WHITE;
+		lineXZ (x+24,z+49) (x+31,z+32) BLACK;
+		put2D(x+17,z+1) BLACK(x+31,z+32)
+		
+	);
+	
+fun ring r COLOR (x,z) =
+	(
+		ringXZ r 1 COLOR(x,z)
+	);
+	
+fun buildArt()=
+	(	    	    		
+	   	circles 70 (72,72);	
+				
+	(* ========================================= *)
+		setMySpace2D (0,0) (150,80) ; 	
+		
+		ring 70 BLACK (72,72);
+		ring 70 BLACK (72,71);
+		ring 70 BLACK (72,70);
+		
+		ring 55 BLACK (72,73);
+		ring 55 BLACK (72,72);
+		ring 55 BLACK (72,71);
+		ring 55 BLACK (72,70);
+		
+		ring 40 BLACK (72,73);
+		ring 40 BLACK (72,72);		
+		ring 40 BLACK (72,71);
+		ring 40 BLACK (72,70);
+		
+		ring 25 BLACK (72,73);
+		ring 25 BLACK (72,72);		
+		ring 25 BLACK (72,71);
+		ring 25 BLACK (72,70);					
+
+	(* ========================================= *)	
+		setMySpace2D (0,80) (150,70) ;	
+        
+		incOffset2D(0,~80);
+		
+		ring 70 BLACK (72,71);
+			
+		ring 55 BLACK (72,70);			
+		
+		ring 40 BLACK (72,70);				
+		
+		ring 25 BLACK (72,70);	
+
+    (* ========================================= *)			
+		setMySpace2D (0,0) (150,150) ;
+		
+		setOffset2D(46,46);
+		
+		star (0,0);
+		
+		setOffset2D(0,0);
+		
+		ring 5 BLACK (71,71)
+			
+	);
+
+(*========================================================*)
+
+build2D(300,300);		
+buildArt();		
+
+show2D "Art Show";

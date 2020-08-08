@@ -1,0 +1,138 @@
+open Level_4;
+(* ==================================== 
+				ART SHOW 
+		  CAPTAIN AMERICA SHIELD 3D
+	  *******************************			
+	  * 	Author: Helio Ribeiro   *
+	  * 	Class: CIST 1940-001    *
+	  * 	Date:   10/26/2014      *
+	  *******************************
+	  
+  =====================================*)     
+
+(* Functions declarations *)
+fun cylinders r (x,y,z) =
+	(		
+		hollowCylinderZ r 10 [RED] (x,y,z);
+		hollowCylinderZ (r-15) 10 [WHITE] (x,y,z-5);
+		hollowCylinderZ (r-30) 10 [RED] (x,y,z-10);
+		hollowCylinderZ (r-45) 10 [BLUE] (x,y,z-15);
+		hollowCylinderZ (r-60) 10 [WHITE] (x,y,z-15)
+		
+		(*hollowCylinderZ (r-10) 10 [EMPTY] (x,y,z+5);
+		hollowCylinderZ (r-15) 10 [EMPTY] (x,y,z);
+		hollowCylinderZ (r-30) 10 [EMPTY] (x,y,z-5);
+		hollowCylinderZ (r-45) 10 [EMPTY] (x,y,z-10)*)
+	);
+
+(*========================================================*)	
+
+fun star (x,y,z) = 
+	(
+	    put (49,1,1) WHITE(x+1,y+33,z);	
+		
+		line (x+12,y+4,z) (x+49,y+33,z) WHITE;
+		line (x+13,y+5,z) (x+48,y+33,z) WHITE;
+		line (x+14,y+6,z) (x+47,y+33,z) WHITE;
+		line (x+15,y+7,z) (x+46,y+33,z) WHITE;
+		line (x+16,y+8,z) (x+45,y+33,z) WHITE;
+		line (x+17,y+9,z) (x+44,y+33,z) WHITE;
+		line (x+18,y+10,z) (x+43,y+33,z) WHITE;
+		line (x+19,y+11,z) (x+42,y+33,z) WHITE;
+		line (x+20,y+12,z) (x+41,y+33,z) WHITE;
+		line (x+21,y+13,z) (x+40,y+33,z) WHITE;
+		line (x+22,y+14,z) (x+39,y+33,z) WHITE;
+		line (x+23,y+15,z) (x+38,y+33,z) WHITE;
+		line (x+24,y+16,z) (x+37,y+33,z) WHITE;
+		line (x+25,y+17,z) (x+36,y+33,z) WHITE;
+		line (x+26,y+18,z) (x+35,y+33,z) WHITE;
+		line (x+27,y+19,z) (x+34,y+33,z) WHITE;
+		line (x+25,y+20,z) (x+33,y+33,z) WHITE;
+		
+		line (x+39,y+4,z) (x+1,y+33,z) WHITE;
+		line (x+38,y+5,z) (x+2,y+33,z) WHITE;
+		line (x+37,y+6,z) (x+3,y+33,z) WHITE;
+		line (x+36,y+7,z) (x+4,y+33,z) WHITE;
+		line (x+35,y+8,z) (x+5,y+33,z) WHITE;
+		line (x+34,y+9,z) (x+6,y+33,z) WHITE;
+		line (x+33,y+10,z) (x+7,y+33,z) WHITE;
+		line (x+32,y+11,z) (x+8,y+33,z) WHITE;
+		line (x+31,y+12,z) (x+9,y+33,z) WHITE;
+		line (x+30,y+13,z) (x+10,y+33,z) WHITE;
+		line (x+29,y+14,z) (x+11,y+33,z) WHITE;
+		line (x+28,y+15,z) (x+12,y+33,z) WHITE;
+		line (x+27,y+16,z) (x+13,y+33,z) WHITE;
+		line (x+26,y+17,z) (x+14,y+33,z) WHITE;
+		line (x+25,y+18,z) (x+15,y+33,z) WHITE;		
+		
+		line (x+12,y+4,z) (x+15,y+21,z) WHITE;
+		line (x+13,y+5,z) (x+16,y+22,z) WHITE;
+		line (x+14,y+6,z) (x+17,y+23,z) WHITE;
+		line (x+15,y+7,z) (x+18,y+24,z) WHITE;
+		line (x+16,y+8,z) (x+19,y+25,z) WHITE;
+		line (x+17,y+9,z) (x+20,y+26,z) WHITE;
+		line (x+18,y+10,z) (x+21,y+27,z) WHITE;
+		line (x+19,y+11,z) (x+22,y+28,z) WHITE;
+		line (x+20,y+12,z) (x+23,y+29,z) WHITE;
+		
+		line (x+35,y+21,z) (x+39,y+4,z) WHITE;
+		line (x+34,y+22,z) (x+38,y+5,z) WHITE;
+		line (x+33,y+23,z) (x+37,y+6,z) WHITE;
+		line (x+32,y+24,z) (x+36,y+7,z) WHITE;
+		line (x+31,y+25,z) (x+35,y+8,z) WHITE;
+		line (x+30,y+26,z) (x+34,y+9,z) WHITE;
+		line (x+29,y+27,z) (x+33,y+10,z) WHITE;
+		line (x+28,y+28,z) (x+32,y+11,z) WHITE;
+		line (x+27,y+29,z) (x+31,y+12,z) WHITE;
+		
+		line (x+18,y+33,z) (x+25,y+50,z) WHITE;
+		line (x+19,y+33,z) (x+25,y+50,z) WHITE;
+		line (x+20,y+33,z) (x+25,y+50,z) WHITE;
+		line (x+21,y+33,z) (x+25,y+50,z) WHITE;
+		line (x+22,y+33,z) (x+25,y+50,z) WHITE;
+		line (x+23,y+33,z) (x+25,y+50,z) WHITE;		
+		line (x+24,y+33,z) (x+25,y+50,z) WHITE;
+		line (x+25,y+33,z) (x+25,y+50,z) WHITE;
+		
+		line (x+25,y+50,z) (x+32,y+33,z) WHITE;
+		line (x+25,y+50,z) (x+31,y+33,z) WHITE;
+		line (x+25,y+50,z) (x+30,y+33,z) WHITE;
+		line (x+25,y+50,z) (x+29,y+33,z) WHITE;
+		line (x+25,y+50,z) (x+28,y+33,z) WHITE;
+		line (x+25,y+50,z) (x+27,y+33,z) WHITE;
+		line (x+25,y+50,z) (x+26,y+33,z) WHITE;
+		line (x+25,y+50,z) (x+25,y+33,z) WHITE;
+		
+		line (x+12,y+4,z) (x+15,y+21,z) BLACK;
+		line (x+39,y+4,z) (x+25,y+14,z) BLACK;
+		line (x+12,y+4,z) (x+25,y+14,z) BLACK;
+		line (x+15,y+21,z) (x+1,y+33,z) BLACK;
+		line (x+35,y+21,z) (x+39,y+4,z) WHITE;
+		line (x+18,y+33,z) (x+25,y+50,z) WHITE;
+		line (x+24,y+49,z) (x+31,y+32,z) BLACK;
+		
+		put(17,1,1) BLACK(x+31,y+32,z)
+		
+	);
+(*========================================================*)
+fun buildArt() =
+	(	    	    		
+	   	cylinders 70 (75,75,75);
+		ringZ 70 1 10 [BLACK] (75,75,75);
+		ringZ 71 1 10 [BLACK] (75,75,76);
+		ringZ 72 1 10 [BLACK] (75,75,77);
+		ringZ 73 1 10 [BLACK] (75,75,78);
+				
+		ringZ 55 1 10 [BLACK] (75,75,70);
+		ringZ 40 1 10 [BLACK] (75,75,65);
+		ringZ 25 1 10 [BLACK] (75,75,60);
+		
+		star (49,49,60)
+	);
+(*========================================================*)
+
+build(160,160,160);	
+	
+buildArt();		
+
+show "Art Show";
